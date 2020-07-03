@@ -1,0 +1,50 @@
+{% extends 'base.html' %} {% block notes %}
+<section class="contact-section bg-black">
+  <div class="container">
+    <div class="col-md-4 mb-3 mb-md-0">
+      <div class="card py-4 h-100">
+        <div class="card-body text-center">
+          <h3>Add Task</h3>
+          <div class="row">
+            <form
+              action="{{url_for('insert_note')}}"
+              method="POST"
+              class="col-md-12 col-lg-12"
+            >
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix"></i>
+                  <label for="icon_prefix">Note Title</label><br />
+                  <input
+                    id="note_title"
+                    name="note_title"
+                    type="text"
+                    class="validate"
+                  />
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix"></i>
+                  <label for="icon_telephone">Note</label><br />
+                  <textarea
+                    name="note_information"
+                    id="note_information"
+                    class="materialize-textarea"
+                  ></textarea>
+                </div>
+              </div>
+              <div class="row">
+                <button class="btn" type="submit" name="action">
+                  Add Note
+                  <i class="material-icons right">playlist_add</i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

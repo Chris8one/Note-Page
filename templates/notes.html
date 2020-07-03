@@ -1,0 +1,38 @@
+{% extends 'base.html' %} {% block notes %}
+<!-- Masthead -->
+<header class="masthead">
+  <div class="container d-flex h-100 align-items-center">
+    <div class="mx-auto text-center">
+      <h1 class="mx-auto my-0 text-uppercase">Note Page</h1>
+      <h2 class="text-white-50 mx-auto mt-2 mb-5">
+        Leave notes for everyone to see.
+      </h2>
+      <a class="btn btn-primary js-scroll-trigger" href="#notes">See Notes</a>
+    </div>
+  </div>
+</header>
+<!-- Notes -->
+<section class="contact-section bg-black" id="notes">
+  <div class="container">
+    <div class="col-md-12 col-lg-12 mx-auto text-center">
+      <i class="far fa-clipboard fa-2x mb-2 text-white"></i>
+      <h2 class="text-white mb-4">Notes</h2>
+      <div class="row">
+        {% for note in notes %}
+        <div class="col-md-4 mb-3 mt-4 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <h4 class="text-uppercase m-0">{{note.note_title}}</h4>
+              <hr />
+              <div class="small text-black-50">{{note.note_information}}</div>
+              <a href="{{url_for('add_note')}}"><i class="far fa-edit"></i></a>
+              <i class="far fa-trash-alt"></i>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
