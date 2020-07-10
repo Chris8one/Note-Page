@@ -160,12 +160,12 @@ sup {
 }
 
 a {
-  color: #64a19d;
+  color: gray;
   text-decoration: none;
   background-color: transparent;
 }
 a:hover {
-  color: #467370;
+  color: rgb(105, 105, 105);
   text-decoration: underline;
 }
 
@@ -3263,7 +3263,7 @@ input[type=button].btn-block {
 .dropdown-item.active, .dropdown-item:active {
   color: #fff;
   text-decoration: none;
-  background-color: #64a19d;
+  background-color: rgb(162, 163, 163);
 }
 .dropdown-item.disabled, .dropdown-item:disabled {
   color: #6c757d;
@@ -4030,7 +4030,7 @@ input[type=button].btn-block {
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   color: #fff;
-  background-color: #64a19d;
+  background-color: rgb(162, 163, 163);
 }
 
 .nav-fill .nav-item {
@@ -10145,8 +10145,8 @@ body {
 #mainNav .navbar-toggler {
   font-size: 80%;
   padding: 0.75rem;
-  color: #64a19d;
-  border: 1px solid #64a19d;
+  color: rgb(162, 163, 163);
+  border: 1px solid rgb(162, 163, 163);
 }
 #mainNav .navbar-toggler:focus {
   outline: none;
@@ -10200,15 +10200,15 @@ body {
     border-bottom: 0.25rem solid transparent;
   }
   #mainNav.navbar-shrink .nav-link:hover {
-    color: #64a19d;
+    color: rgb(162, 163, 163);
   }
   #mainNav.navbar-shrink .nav-link:active {
-    color: #467370;
+    color: rgb(162, 163, 163);
   }
   #mainNav.navbar-shrink .nav-link.active {
-    color: #64a19d;
+    color: rgb(162, 163, 163);
     outline: none;
-    border-bottom: 0.25rem solid #64a19d;
+    border-bottom: 0.25rem solid rgb(162, 163, 163);
   }
 }
 
@@ -10329,7 +10329,7 @@ body {
 }
 .contact-section .card {
   border: 0;
-  border-bottom: 0.25rem solid #64a19d;
+  border-bottom: 0.25rem solid rgb(162, 163, 163);
 }
 .contact-section .card h4 {
   font-size: 0.8rem;
@@ -10338,7 +10338,7 @@ body {
   letter-spacing: 0.15rem;
 }
 .contact-section .card hr {
-  border-color: #64a19d;
+  border-color: rgba(162, 163, 163, 0.521);
   border-width: 0.25rem;
   width: 3rem;
 }
@@ -10363,4 +10363,28 @@ body {
 
 .footer {
   padding: 5rem 0;
+}
+
+a .red {
+    color: rgb(230, 2, 2);
+}
+
+a:hover .red {
+    color: darkred;
+}
+
+.btn-center {
+    margin: 0 auto;
+}
+
+.btn-clr {
+    background-color: rgba(162, 163, 163, 0.521);
+}
+
+.black {
+    color: black;
+}
+
+.center {
+    margin: auto;
 }

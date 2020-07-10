@@ -9,7 +9,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Note Page - Leave a Note</title>
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="static/img/diamond.png" />
     <!-- Font Awesome icons (free version) -->
     <script
       src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"
@@ -30,12 +30,16 @@
       href="{{url_for('static', filename='css/styles.css')}}"
       type="text/css"
     />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
   </head>
   <body id="page-top">
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Note Page</a>
+        <a class="navbar-brand js-scroll-trigger" href="/get_notes#page-top">Note Page</a>
         <button
           class="navbar-toggler navbar-toggler-right"
           type="button"
@@ -51,15 +55,13 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#notes">Notes</a>
+              <a class="nav-link js-scroll-trigger" href="/get_notes#notes">Notes</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{'add_note'}}"
-                >New note</a
-              >
+              <a class="nav-link" href="/add_note">New note</a>
             </li>
           </ul>
         </div>
@@ -74,45 +76,31 @@
           <h2 class="text-white mb-5">Contact Me</h2>
         </div>
         <div class="row">
-          <div class="col-md-4 mb-3 mb-md-0">
+          <div class="col-md-4 mb-3 mb-md-0 center">
             <div class="card py-4 h-100">
               <div class="card-body text-center">
-                <i class="fas fa-map-marked-alt text-primary mb-2"></i>
-                <h4 class="text-uppercase m-0">Address</h4>
-                <hr class="my-4" />
-                <div class="small text-black-50">
-                  4923 Market Street, Orlando FL
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-3 mb-md-0">
-            <div class="card py-4 h-100">
-              <div class="card-body text-center">
-                <i class="fas fa-envelope text-primary mb-2"></i>
-                <h4 class="text-uppercase m-0">Email</h4>
-                <hr class="my-4" />
-                <div class="small text-black-50">
-                  <a href="#!">hello@yourdomain.com</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-3 mb-md-0">
-            <div class="card py-4 h-100">
-              <div class="card-body text-center">
-                <i class="fas fa-mobile-alt text-primary mb-2"></i>
-                <h4 class="text-uppercase m-0">Phone</h4>
-                <hr class="my-4" />
-                <div class="small text-black-50">+1 (555) 902-8832</div>
+              <h4 class="text-left">Send me a question</h4>
+                <form>
+                    <input type="text" name="name" id="fullname" class="form-control" placeholder="Name" required>
+                    <input type="email" name="email" id="emailaddress" class="form-control" placeholder="Email" required>
+                    <textarea rows="5" name="projectsummary" id="projectsummary" class="form-control" placeholder="Message" required></textarea>
+                    <div class="form-row text-center">
+                        <div class="col">
+                            <button class="btn btn-center" type="submit" name="action">
+                                Send Email
+                            <i class="far fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+				</form>
               </div>
             </div>
           </div>
         </div>
         <div class="social d-flex justify-content-center">
-          <a class="mx-2" href="#!"><i class="fab fa-instagram"></i></a>
-          <a class="mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-          <a class="mx-2" href="#!"><i class="fab fa-github"></i></a>
+          <a class="mx-2" href="https://www.instagram.com/chrisgranback/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a class="mx-2" href="https://www.facebook.com/chris8one" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a class="mx-2" href="https://github.com/Chris8one" target="_blank"><i class="fab fa-github"></i></a>
         </div>
       </div>
     </section>
@@ -126,6 +114,6 @@
     <!-- Third party plugin JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <!-- Core theme JS -->
-    <script src="static/js/scripts.js"></script>
+    <script src="{{url_for('static', filename='js/scripts.js')}}"></script>
   </body>
 </html>
