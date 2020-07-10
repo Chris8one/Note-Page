@@ -30,6 +30,7 @@
       href="{{url_for('static', filename='css/styles.css')}}"
       type="text/css"
     />
+    <!-- Google Icons -->
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
@@ -67,6 +68,7 @@
         </div>
       </div>
     </nav>
+    <!-- A block where notes.html will be shown inside -->
     {% block notes %} {% endblock %}
     <!-- Contact -->
     <section class="contact-section bg-black" id="contact">
@@ -76,7 +78,7 @@
           <h2 class="text-white mb-5">Contact Me</h2>
         </div>
         <div class="row">
-          <div class="col-md-4 mb-3 mb-md-0 center">
+          <div class="col-md-6 mb-4 mb-md-0 center">
             <div class="card py-4 h-100">
               <div class="card-body text-center">
               <h4 class="text-left">Send me a question</h4>
